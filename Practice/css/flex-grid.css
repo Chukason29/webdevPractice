@@ -27,7 +27,6 @@ ul.flex-bar li{
     border: 1px solid red;
     /*flex :1;     This acts like flex-basis and makes the whole children have same width the*/
     align-self: flex-start; /*similar to align-items but is used for the children*/
-    justify-self: flex-end; /*similar to justify-content but is used for the children*/
     flex-grow: 0; /*This allows the children to completely take the total width of the parent element*/
     flex-shrink: 1; /* No matter how long the children are, this shrinks them to the width of the parent*/
     flex-basis: auto; /*flex-basis is used to set the width of all the children same width. it can have a value of auto*/

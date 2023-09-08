@@ -1,0 +1,24 @@
+/* This is the standard css layout*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Here insert css variables*/
+}
+
+
+@media screen and (min-width: 578px) {
+    
+}
+@media screen and (min-width: 769px) {
+    
+}
+@media screen and (min-width: 1025px) {
+    
+}
+@media screen and (min-width: 1201px) {
+    
+}
