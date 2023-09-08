@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Flex is best used when you the columns doesnt have to be same size*/
+/*Grid is best used when you the columns have to be same size*/
+
+/*Navbar using flex*/
+ul.flex-bar{
+    display: flex; /*Here the parent element of the items is flexed*/
+    /*flex-direction: column;    This is used in @media queries to turn the flex to a column*/
+    justify-content: center;
+    /*
+        justify-content is used to move children horizontally start, center or end of the parent, It can also be used to 
+        add spaces between and around flex items
+    */
+    align-items: center;/*align-items is used to move children vertically start, center or end of the parent,*/
+    gap: 1rem; /*used to create space between flexed items*/
+    flex-wrap: wrap; /*used to make sure the children stay put within the parent in small widths*/
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid green;
+}
+ul.flex-bar li{
+    border: 1px solid red;
+    /*flex :1;     This acts like flex-basis and makes the whole children have same width the*/
+    align-self: flex-start; /*similar to align-items but is used for the children*/
+    justify-self: flex-end; /*similar to justify-content but is used for the children*/
+    flex-grow: 0; /*This allows the children to completely take the total width of the parent element*/
+    flex-shrink: 1; /* No matter how long the children are, this shrinks them to the width of the parent*/
+    flex-basis: auto; /*flex-basis is used to set the width of all the children same width. it can have a value of auto*/
+}
+.flex1{
+    background-color: rgb(2, 12, 70);
+    color:azure;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 95px;
+}
+.flex1 > *{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+ul.flex-bar1{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+ul.flex-bar1 > li{
+    flex-shrink: 1;
+}
+ul.flex-bar1 > li:nth-child(4) a{
+    background-color: rgb(0, 187, 25);
+    border: none;
+    border-radius: 40px;
+    padding: 5px 15px;
+    
+
+}
+ul.flex-bar1 > li a{
+    color: azure;
+    text-decoration: none;
+}
+
+
+
+
+/***************************************** FlexBar 2 ***********************************/
+.flex2{
+    background-color: rgb(2, 12, 70);
+    color:azure;
+    padding: 12px 95px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex2 > *{
+    flex-shrink: 1;
+}
+ul.flex-bar2{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem
+}
+ul.flex-bar2 > li a{
+    text-decoration: none;
+    color: azure;
+}
+.contact > a{
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 40px;
+    background-color: rgb(0, 187, 25);
+    color: azure;
+}
+
+
+/***************************************** FlexBar 3 ***********************************/
+.flex3{
+    background-color: rgb(2, 12, 70);
+    padding: 15px 95px;
+    display: flex;
+    justify-content: space-between;
+    color: azure;
+    align-items: center;
+}
+ul.flex-bar3{
+    list-style-type: none;
+    display: flex;
+    gap:2rem;
+}
+ul.flex-bar3 > li a{
+    color: azure;
+    text-decoration: none;
+}
+ul.flex-bar3 > li:nth-child(4) a{
+    color: azure;
+    border-radius: 40px;
+    background-color: rgb(0, 187, 25);
+    padding: 5px 15px;
+}
