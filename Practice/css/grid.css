@@ -1,0 +1,83 @@
+/* This is the standard css layout*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Here insert css variables*/
+}
+
+
+/*First of all give all the columns their names respectively please note that their value are not in quotes*/
+.grid > div:nth-child(1){
+    grid-area: hotpink;
+}
+.grid > div:nth-child(2){
+    grid-area: maroon;
+}
+.grid > div:nth-child(3){
+    grid-area: red;
+}
+.grid > div:nth-child(4){
+    grid-area: green;
+}
+.grid > div:nth-child(5){
+    grid-area: yellow;
+}
+.grid > div:nth-child(6){
+    grid-area: palevioletred;
+}
+
+.grid{
+/*declare the grid system*/
+    display: grid;
+
+/* This is the mobile view of the placement every column in stacked on each other */
+    grid-template-areas: 
+        'hotpink'
+        'maroon'
+        'red'
+        'green'
+        'yellow'
+        'palevioletred'
+    ;
+ /*creates space between columns*/
+    gap : .9rem
+
+}
+
+/*
+    Here each 
+*/
+
+/*grid-column-start is used to move a column to another column, i.e. tells the column where to start from*/
+@media screen and (min-width: 578px) {
+    .grid{
+        /* This is the mobile view of the placement every column in stacked on each other */
+            grid-template-areas: 
+                'hotpink maroon'
+                'red red'
+                'green yellow'
+                'palevioletred palevioletred'
+            ;
+        }
+}
+@media screen and (min-width: 769px) {
+    
+}
+@media screen and (min-width: 1025px) {
+    .grid{
+        /* This is the mobile view of the placement every column in stacked on each other */
+            grid-template-areas: 
+                'hotpink maroon palevioletred'
+                'red red palevioletred'
+                'green yellow yellow'
+            ;
+        }
+    
+}
+@media screen and (min-width: 1201px) {
+    
+}
