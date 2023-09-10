@@ -1,0 +1,79 @@
+/* This is the standard css layout*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Here insert css variables*/
+}
+.parent-element{
+    display: flex; /*Here the parent element of the items is flexed*/
+    /*flex-direction: column;    This is used in @media queries to turn the flex to a column*/
+    justify-content: center;
+    /*
+        justify-content is used to move children horizontally start, center or end of the parent, It can also be used to 
+        add spaces between and around flex items
+    */
+    align-items: center;/*align-items is used to move children vertically start, center or end of the parent,*/
+    gap: 1rem; /*used to create space between flexed items*/
+    flex-wrap: wrap; /*used to make sure the children stay put within the parent in small widths*/
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid green;
+}
+.children-element{
+    border: 1px solid red;
+    /*flex :1;     is the short-hand for flex-grow, flex-shrink and flex-basis*/
+    align-self: flex-start; /*similar to align-items but is used for the children*/
+    flex-grow: 0; /*This allows the children to completely take the total width of the parent element*/
+    flex-shrink: 1; /* No matter how long the children are, this shrinks them to the width of the parent*/
+    flex-basis: auto; /*flex-basis is used to set the width of all the children same width. it can have a value of auto*/
+}
+
+/*******ACTUAL CODE********/
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.flex > div{
+    width: 90%;
+    border: 1px solid green;
+    height:220px;
+    margin: auto;
+}
+
+
+@media screen and (min-width: 578px) {
+    
+}
+@media screen and (min-width: 769px) {
+    .flex{
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1.5rem 0rem;
+    }
+    .flex > div{
+        border: 1px solid green;
+        height:220px;
+        flex-basis: 46%;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .flex > div{
+        border: 1px solid green;
+        height:220px;
+        flex-basis: 20%;
+    }
+    
+}
+@media screen and (min-width: 1201px) {
+    
+}
