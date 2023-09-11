@@ -13,21 +13,27 @@
 /*First of all give all the columns their names respectively please note that their value are not in quotes*/
 .grid > div:nth-child(1){
     grid-area: hotpink;
+    box-shadow: 0px 0px 18px 10px hotpink;
 }
 .grid > div:nth-child(2){
-    grid-area: maroon;
+    grid-area: maroon; 
+    box-shadow: 0px 0px 18px 10px maroon;
 }
 .grid > div:nth-child(3){
     grid-area: red;
+    box-shadow: 0px 0px 18px 10px red;
 }
 .grid > div:nth-child(4){
     grid-area: green;
+    box-shadow: 0px 0px 18px 10px green;
 }
 .grid > div:nth-child(5){
     grid-area: yellow;
+    box-shadow: 0px 0px 18px 10px yellow;
 }
 .grid > div:nth-child(6){
     grid-area: palevioletred;
+    box-shadow: 0px 0px 18px 10px palevioletred;
 }
 
 .grid{
