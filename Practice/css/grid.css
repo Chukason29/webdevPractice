@@ -39,7 +39,7 @@
 .grid{
 /*declare the grid system*/
     display: grid;
-
+    grid-auto-columns: 1fr;
 /* This is the mobile view of the placement every column in stacked on each other */
     grid-template-areas: 
         'hotpink'
@@ -54,9 +54,26 @@
 
 }
 
-/*
-    Here each 
-*/
+
+
+/*SIMPLE GRID SYSTEM STARTS HERE*/
+.simple-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17em, 1fr));
+    grid-gap: 1.5em;
+    margin-block-start: 5rem;
+  }
+  .simple-grid > div{
+    border: 1px solid red;
+  }
+  .simple-grid > div P{
+    margin-inline: auto;
+    max-width: 100%;
+  }
+  /*END OF SIMPLE GRID SYSTEM*/
+
+
+
 
 /*grid-column-start is used to move a column to another column, i.e. tells the column where to start from*/
 @media screen and (min-width: 578px) {
