@@ -41,8 +41,21 @@ console.log(arr3);
 
 //.every() loops through the items of the array
 // use every to check if all the items in an array is following a particular pattern
+// if all the items are following the define rule it returns true
+// even if one item fails the test .every returns false
 
-console.log(arr2.every(oddNums));
-function oddNums(num) {
-    return num > 3;
-}
+const arrayz = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+
+// .every() return boolean value... if every item passes the test, it return true. if any item fails the test, 
+// it returns false
+
+
+
+// filter is used to populate another array with items that passed a test in this current array
+const evens = arrayz.filter(
+    (item) => item % 2 == 0
+);
+console.log(evens);  // output all even numbers in arrays
+
+const odds = arrayz.filter( (item) => item % 2 > 0)
+console.log(odds); // output all odd numbers in arrays
