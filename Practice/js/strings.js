@@ -17,7 +17,7 @@ let sname = "alaegbu";
 let fullname = fname + ' ' + sname;
 console.log(fullname);
 
-// string can also be concatenated using the += operator
+// string can also be concatenated using the += operatorp
 
 let babe = "Ngozi";
 babe += " is my babe";
@@ -39,5 +39,10 @@ nameOfFootballer[0] = "B";
 console.log(nameOfFootballer); 
 // still outputs Cristiano Ronaldo instead of Bristiano Ronald
 
+// Getting the last letter of a string
+let girlie = "Pamela"
+console.log(girlie[girlie.length-1]);
 
-
+// getting the 4th letter to the last
+let guyo = "Yartomizan"
+console.log(guyo[guyo.length-4]);
