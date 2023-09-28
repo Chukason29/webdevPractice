@@ -77,9 +77,10 @@ console.log(places.reverse());
 const numbers = [3,5,4,23,12,54,17,15,28,62];
 
 console.log(numbers.sort)// This wont work at all
-
-console.log(numbers.sort((x, y) => {x - y})); // this will sort in ascending order
-console.log(numbers.sort((x, y) => { y - x})); // this will sort in descending order
+let descendSort = numbers.sort((x, y) => x - y);
+console.log(descendSort);
+let ascendSort = numbers.sort((x, y) => y - x);
+console.log(ascendSort);
 
 const products = [
     {
@@ -100,7 +101,31 @@ const products = [
     }
 ]
 
-let sortedProducts = products.sort((x, y) => {x.price - y.price});
-let lowProducts = products.filter((product) => product.price <= 10000); // selects every  products less than 10,000 dollars
-console.log(lowProducts);
+let ascendSortedProducts = products.sort((x, y) => x.price - y.price);
+console.log(ascendSortedProducts); // starts with the product with the lowest price
+
+let descendSortedProduct = products.sort((x ,y) => y.price - x.price);
+console.log(descendSortedProduct); // starts with the highest price
+
+// Now let us get collec just the price lower than 10K
+let filteredPrice = products.filter((item) => item.price <= 10000);
+console.log(filteredPrice);
+
+
+const numArray = [11,222,52,64,25,27,447,3,92,91,135,]
+
+// To get the highest number in an array, use Math.max.apply(null, arrayName)
+let maxNumber = Math.max.apply(null, numArray);
+console.log("maximum number is: " + maxNumber);
+
+let minNumber = Math.min.apply(null, numArray);
+console.log("minimum number is: " + minNumber);
+// Sorting numbers using the Fisher Yates Method
+
+let maxSort = products.sort((x,y) => y.price - x.price);
+let maxPrice = products[0].price;
+let leastPrice = products[products.length-1].price;
+console.log("Most Expensive Product: " + maxPrice);
+console.log("Least Expensive Product: " + leastPrice);
+
 
