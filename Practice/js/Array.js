@@ -88,8 +88,16 @@ const products = [
         price: 6000
     },
     {
+        name: 'Audi',
+        price: 22000
+    },
+    {
         name: 'bmw',
         price: 3000
+    },
+    {
+        name: 'Innoson',
+        price: 3500
     },
     {
         name: 'benz',
@@ -107,25 +115,58 @@ console.log(ascendSortedProducts); // starts with the product with the lowest pr
 let descendSortedProduct = products.sort((x ,y) => y.price - x.price);
 console.log(descendSortedProduct); // starts with the highest price
 
+//sorting objects by strings
+function objSorting(a, b) {
+    let x = a.name.toLowerCase();
+    let y = b.name.toLowerCase();
+    if(x > y){return 1;}
+    if(x < y){return -1;}
+    return 0;
+}
+console.log(products.sort(objSorting));
+
+
+
 // Now let us get collec just the price lower than 10K
 let filteredPrice = products.filter((item) => item.price <= 10000);
 console.log(filteredPrice);
 
+const numArray = [11,222,52,64,25,27,447,3,92,91,135,];
 
-const numArray = [11,222,52,64,25,27,447,3,92,91,135,]
-
+// THIS METHOD OF FINDING MAX AND MIN NUMBERS ISN'T EFFICIENT THE BEST METHOD IS THE "HOME MADE" METHOD
 // To get the highest number in an array, use Math.max.apply(null, arrayName)
 let maxNumber = Math.max.apply(null, numArray);
 console.log("maximum number is: " + maxNumber);
 
 let minNumber = Math.min.apply(null, numArray);
 console.log("minimum number is: " + minNumber);
-// Sorting numbers using the Fisher Yates Method
 
-let maxSort = products.sort((x,y) => y.price - x.price);
-let maxPrice = products[0].price;
-let leastPrice = products[products.length-1].price;
-console.log("Most Expensive Product: " + maxPrice);
-console.log("Least Expensive Product: " + leastPrice);
+
+//Home Made method of finding Min and Max values
+
+function maxValue(arr) {
+    len = arr.length;// collect the length of the array
+    max = -Infinity; // make the max value the smallest number
+    while(len--){ // as you move down the array
+        if (arr[len] > max) { // if the current item is greater than the current max value
+            max = arr[len]; // then the current value is the max Number
+        }
+    }
+    return max; // return the max number
+}
+console.log(maxValue(numArray));
+
+function minValue(arr) {
+    len = arr.length;
+    min = Infinity;
+    while (len--) {
+        if (arr[len] < min) {
+            min = arr[len];
+        }
+    }
+    return min
+}
+console.log(minValue(numArray));
+
 
 
