@@ -35,17 +35,44 @@ const products = [
 // let us reduce the price of each item by 10% and output all the products
 //console.log(products.forEach(priceReduction));
 let productList ="";
-//products.forEach(listAllProducts);
-console.log(productList);
-function priceReduction(item){
-    item.price -= item.price /10;
-    return item.price;
-}
+
+//reducing each price by 10%
+products.forEach((item) => {
+    item.price -= item.price/10;
+    //console.log(item);
+});
+
 /*function listAllProducts(product) {
     productList += product.name +"\n" + product.price + "\n" + product.model +"\n\n";
     return productList;
 }*/
 products.forEach((product)=>{ //This is the alternative of using normal function
     productList += product.name + '\n'+ product.price + '\n'+ product.model + '\n\n';
-    console.log(productList);
+    //console.log(productList);
 });
+
+
+
+/* While the .forEach performs actions on each array, it doesn't create a new array for it it only changes 
+    the current array.
+    To create a new array after performing such functions, use .map()
+
+    .map() doesnt change the values of the current array
+    It create a new array for its actions
+    .map() return only an array
+*/
+//reducing price by 10% using .map
+
+let priceReduction = products.map((item) =>{
+    item.price -= item.price / 10;
+    return item;
+});
+//console.log(priceReduction);
+
+//////////////////  OR  ////////////////////////////////////////////////////////////
+
+function priceRed(item) {
+    item.price -= item.price / 10;
+    return item;
+}
+//console.log(products.map(priceRed));
