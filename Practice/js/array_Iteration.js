@@ -53,8 +53,7 @@ products.forEach((product)=>{ //This is the alternative of using normal function
 
 
 
-/* While the .forEach performs actions on each array, it doesn't create a new array for it it only changes 
-    the current array.
+/* While the .forEach performs actions on each array, it doesn't create a new array
     To create a new array after performing such functions, use .map()
 
     .map() doesnt change the values of the current array
@@ -88,7 +87,30 @@ const arrayPairs = [
     [4, 5, 6],
     [7, 8, 9]
 ]
-let singleArray = arrayPairs.map(function(item, i) {
-    
+let singleArray = arrayPairs.flatMap(function(item) {
+    item = item.reduce(function(a, b) { return a + b})
+    return item;
 });
-console.log(singleArray);
+//console.log(singleArray);
+
+const nums = [1,4,5,6,7,8,2,5,7,8,9,3,1,4,5,6,3,2];
+
+// .reduce is used to the total summation of a numerical array
+// reduce can have four parameters which are
+//.reduce( accumulator, current value, index of current iteration, array used)
+
+reducedNum = nums.reduce(function(a, b) { return a + b});
+//console.log(reducedNum);
+
+
+//indexOf() is used to output the first index of an item, if there are more than two items, the index of the first item is returned
+// if the item is not found, it returns -1 if found, return the index
+// syntax array.indexOf(item, start) where start is the place where the search starts n the array
+
+let indexOfNum = nums.indexOf(5, 4); // search for num 5 starting from index 4
+//console.log(indexOfNum);
+
+//.lastIndexOf () returns the index of the last item in an array
+console.log(nums.lastIndexOf(6));
+
+//.includes() returns boolean if an item is found in an array or not
