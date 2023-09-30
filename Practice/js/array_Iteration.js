@@ -76,3 +76,19 @@ function priceRed(item) {
     return item;
 }
 //console.log(products.map(priceRed));
+
+// .flatMap()
+/*
+    This method returns an array
+    It map the array and then flatten it
+    To flatten means making multidimensional array to be a single array
+*/
+const arrayPairs = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+let singleArray = arrayPairs.map(function(item, i) {
+    
+});
+console.log(singleArray);
