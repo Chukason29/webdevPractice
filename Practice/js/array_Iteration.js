@@ -114,3 +114,13 @@ let indexOfNum = nums.indexOf(5, 4); // search for num 5 starting from index 4
 console.log(nums.lastIndexOf(6));
 
 //.includes() returns boolean if an item is found in an array or not
+// .includes() can also be used on String as string can also be seen as an array
+
+console.log(nums.includes(3));
+//Let us use filter and includes methods to find products
+// let us search for car names in a car archive
+const carName = "son";
+const carSearch = products.filter((item) =>
+   item.name.toLowerCase().includes(carName)
+);
+console.log(carSearch);

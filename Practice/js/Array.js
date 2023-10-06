@@ -48,7 +48,9 @@ const arrayz = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 
 // .every() return boolean value... if every item passes the test, it return true. if any item fails the test, 
 // it returns false even if only one item doesn't pass the test
-
+const allFruits = ["Mango", "Orange", "Lime"];
+fruitCheck = allFruits.every((item) => item.length >= 5);
+//console.log(fruitCheck);
 let isArrayAllEven = arrayz.every((item) => item % 2 == 0);
 
 //console.log(isArrayAllEven); // returns false because arrayz has odd numbers also
@@ -57,7 +59,7 @@ let isArrayAllEven = arrayz.every((item) => item % 2 == 0);
 // array passes a given test
 
 let isEvenPresent = arrayz.some((n) => n % 2 === 0);
-console.log(isEvenPresent); // will ouput true because some even numbers are in the array
+//console.log(isEvenPresent); // will ouput true because some even numbers are in the array
 
 // filter is used to populate another array with items that passed a test in this current array
 const evens = arrayz.filter(
@@ -86,7 +88,6 @@ let descendSort = numbers.sort((x, y) => x - y);
 //console.log(descendSort);
 let ascendSort = numbers.sort((x, y) => y - x);
 //console.log(ascendSort);
-
 const products = [
     {
         name: 'Nissan',
@@ -112,7 +113,7 @@ const products = [
         name: 'Porsche',
         price: 20000
     }
-]
+];
 
 let ascendSortedProducts = products.sort((x, y) => x.price - y.price);
 //console.log(ascendSortedProducts); // starts with the product with the lowest price
@@ -121,16 +122,20 @@ let descendSortedProduct = products.sort((x ,y) => y.price - x.price);
 //console.log(descendSortedProduct); // starts with the highest price
 
 //sorting objects by strings
-function objSorting(a, b) {
+
+function objectStringSort(a, b) {
     let x = a.name.toLowerCase();
     let y = b.name.toLowerCase();
-    if(x > y){return 1;}
-    if(x < y){return -1;}
+    if (x > y) { return 1;}
+    if (x < y) { return -1;}
     return 0;
 }
-//console.log(products.sort(objSorting));
 
-
+const productStringSort = products.sort((a, b) =>
+ a.name.toLowerCase() > b.name.toLowerCase()
+)
+console.log(productStringSort);
+console.log(products.sort(objectStringSort));
 
 // Now let us get collec just the price lower than 10K
 let filteredPrice = products.filter((item) => item.price <= 10000);
@@ -147,31 +152,53 @@ let minNumber = Math.min.apply(null, numArray);
 //console.log("minimum number is: " + minNumber);
 
 
-//Home Made method of finding Min and Max values
+//Home Made method of finding Min and Max values which is the best
+
+//Getting the MaxValue
 
 function maxValue(arr) {
-    len = arr.length;// collect the length of the array
-    max = -Infinity; // make the max value the smallest number
-    while(len--){ // as you move down the array
-        if (arr[len] > max) { // if the current item is greater than the current max value
-            max = arr[len]; // then the current value is the max Number
+    lengthOfArray = arr.length;
+    max = -Infinity;
+    while (lengthOfArray--) {
+        if (arr[lengthOfArray] > max) {
+            max = arr[lengthOfArray];
         }
     }
-    return max; // return the max number
+    return max;
 }
-//console.log(maxValue(numArray));
+console.log(maxValue(numArray));
 
 function minValue(arr) {
-    len = arr.length;
-    min = Infinity;
-    while (len--) {
-        if (arr[len] < min) {
-            min = arr[len];
-        }
+    let len = arr.length;
+    let min = Infinity;
+    if (arr[len] < min) {
+        min = arr[len];
     }
-    return min
+    return min;
 }
-//console.log(minValue(numArray));
 
-
+// Mode of an array
+function arrayMode(arr){
+    let numCheck = [];
+    let modeNum = 0;
+    var ourMode;
+    let numCount = 0
+    for (let i = 0; i < arr.length; i++) {
+        const num = arr[i];
+        if (numCheck.includes(num) == 0) {
+            numCheck.push(num);
+            arr.forEach(element => {
+                if (num === element){
+                    numCount++;
+                }
+            });
+        }
+        if (numCount > modeNum){
+            ourMode = arr[i];
+        }       
+    }
+    return ourMode;
+}
+const modeArrays = [1,1,1,1,2,2,2,3,3,3,6,2,7,8,2,1,1];
+console.log(arrayMode(modeArrays));
 
