@@ -19,7 +19,7 @@ for (const key in car){
 }
   
 for(item in car){
-    if (Object.prototype.toString.call(car[item]) === '[object Object]') {
+    if (Object.prototype.toString.call(car[item]) === '[object Object]') { // used to check for object in an object
         console.log(item + ": {");
         for (x in car[item]){
             console.log(
