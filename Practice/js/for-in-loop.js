@@ -32,6 +32,6 @@ for(item in car){
     }
 }
   
-  
-  
-  
+for(item in car){
+    console.log( item + ": " + car[item]);
+}
