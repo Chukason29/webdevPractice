@@ -181,7 +181,7 @@ function minValue(arr) {
 function arrayMode(arr){
     let numCheck = [];
     let modeNum = 0;
-    var ourMode;
+    let ourMode = 0;
     let numCount = 0
     for (let i = 0; i < arr.length; i++) {
         const num = arr[i];
