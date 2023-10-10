@@ -35,4 +35,3 @@ function nameMap(mapName, mapKey) {
 }
 console.log(nameMap(studentMap, studentNumber));
 
-// Map methods
