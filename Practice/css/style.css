@@ -8,7 +8,31 @@
 :root{
     /*Here insert css variables*/
 }
-
+#demo{
+    display: flex;
+    justify-content: center;
+}
+#demo p{
+    padding: 1rem;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
+.purple{
+    background-color: purple;
+}
+.green{
+    background-color: green;
+}
+.orange{
+    background-color: orange;
+}
 
 @media screen and (min-width: 578px) {
     
