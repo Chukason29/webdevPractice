@@ -8,23 +8,29 @@ const colorMap = new Map([
     [5, 'purple'],
     [6, 'orange']
 ]);
+
 function getRandomValueMax(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 function splitString(text){
     let splittedString = "";
     for (const element of text) {
-        splittedString += '<p>' + element +'</p>';
+        if (element === " ") {
+            continue;
+        }
+        splittedString += '<a>' + element +'</a>';
     }
     return splittedString;
 }
 
 function placeResult() {
     try {
-        result.innerHTML =  splitString(inputText);
+        result.innerHTML = splitString(inputText);
+        let a = document.getElementsByTagName('a');
+        for (const element of a) {
+            element.setAttribute('class', colorMap.get(getRandomValueMax(1,6)));
+        }
     } catch (error) {
-        console.log(error.message);
+        
     }
 }
-document.getElementsByTagName('p').classList.add('.red');

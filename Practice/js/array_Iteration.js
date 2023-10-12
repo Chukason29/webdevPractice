@@ -66,7 +66,7 @@ let priceReduction = products.map((item) =>{
     item.price -= item.price / 10;
     return item;
 });
-//console.log(priceReduction);
+console.log(priceReduction);
 
 //////////////////  OR  ////////////////////////////////////////////////////////////
 
