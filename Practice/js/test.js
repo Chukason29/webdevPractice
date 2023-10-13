@@ -34,3 +34,14 @@ function placeResult() {
         
     }
 }
+let hello ="";
+hello = function() {
+    document.getElementById('pdemo').innerHTML += getRandomValueMax(1, 9);
+}
+document.getElementById('pdemo').addEventListener('load', hello);
+
+document.getElementById('btn').addEventListener('click', hello);
+
+function getRandomValueMax(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}

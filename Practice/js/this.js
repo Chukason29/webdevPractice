@@ -1,5 +1,4 @@
-"use strict";
-// this keyword is a very funny stuff
+"use strict"; // always use this
 /*
     this function refers to the object that calls it
 */
@@ -8,9 +7,7 @@
 
 var num1 = 1; // this belongs to the window object
 //console.log(this.num1); //this will return 5
-function reduceSpeed(speed) {
-    return speed = 0;
-}
+let color = "Red";
 //using this in an object
 const car = {
     name: "Audi",
@@ -28,7 +25,6 @@ const car = {
         }
         brake2() // 
     }
-
 }
 // To solve the issue above, use the arrow function to write the inner function
 const car2 = {
@@ -46,6 +42,6 @@ const car2 = {
 
 
 
-car2.brake();
+car.brake();
 
 
