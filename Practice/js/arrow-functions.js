@@ -15,3 +15,6 @@ const addNumber2 = (a, b) => {
     return a + b;
 }
 console.log(addNumber2 (23,6));
+
+// YOU CANNOT DECLARE a class constructor with an arrow function
+// Arrow functions doesnt allow hoisting
