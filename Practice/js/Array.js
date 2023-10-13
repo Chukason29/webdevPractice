@@ -1,3 +1,4 @@
+"use strict"
 // An Array is a variable that can hold multiple values
 let myArray = ['fruit', 'vegetable', 'Garri'];
 
@@ -9,7 +10,7 @@ let theArray = [['Friend', 'Tommyzan'], ['babe', 'Ngozi'], ['Mum', 'Grace']];
 myArray[0] = "Rice";
 //console.log(myArray);// fruit will be replaced with Rice
 // A data in a nested array can be picked up
-nameArray = [["John", 23], ["cat", 2], ['Jane', 'Lanre','Ngozi']];
+const nameArray = [["John", 23], ["cat", 2], ['Jane', 'Lanre','Ngozi']];
 //console.log(nameArray[2][2]); //this outputs Ngozi
 
 ////////////////////////////////////////  Adding Items to arrays/////////////////////////////////////////////////////
@@ -29,7 +30,7 @@ let poppedData = myArray.pop();
 //console.log(myArray); // removes lettuce from the array
 
 //.shift() removes the first item of an 
-removeFirstItem = myArray.shift();
+let removeFirstItem = myArray.shift();
 //console.log(removeFirstItem)// shows the item to be removed
 //console.log(myArray);
 
@@ -49,7 +50,7 @@ const arrayz = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 // .every() return boolean value... if every item passes the test, it return true. if any item fails the test, 
 // it returns false even if only one item doesn't pass the test
 const allFruits = ["Mango", "Orange", "Lime"];
-fruitCheck = allFruits.every((item) => item.length >= 5);
+let fruitCheck = allFruits.every((item) => item.length >= 5);
 //console.log(fruitCheck);
 let isArrayAllEven = arrayz.every((item) => item % 2 == 0);
 
@@ -157,8 +158,8 @@ let minNumber = Math.min.apply(null, numArray);
 //Getting the MaxValue
 
 function maxValue(arr) {
-    lengthOfArray = arr.length;
-    max = -Infinity;
+    let lengthOfArray = arr.length;
+    let max = -Infinity;
     while (lengthOfArray--) {
         if (arr[lengthOfArray] > max) {
             max = arr[lengthOfArray];
