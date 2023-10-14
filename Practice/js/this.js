@@ -39,9 +39,34 @@ const car2 = {
         console.log(brake2());
     }
 }
-
-
-
 car.brake();
 
 
+//In an object method, this refers to the object.
+const Friend ={
+    fname: "Tommyzan",
+    sname: "Amades",
+    age : 28,
+    complexion: "dark",
+    height: 1.52,
+    fullName: function (){
+        return this
+    }
+}
+console.log(Friend.fullName()); //returns the object Friend
+
+
+//Alone, this refers to the global object.
+console.log(this); // window object
+
+//In a function, this refers to the global object.
+//In a function, in strict mode, this is undefined.
+function funcName() {
+    return this;
+}
+console.log(funcName());
+
+
+
+//In an event, this refers to the element that received the event.
+//Methods like call(), apply(), and bind() can refer this to any object.
