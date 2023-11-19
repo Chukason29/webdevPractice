@@ -1,4 +1,4 @@
-// The .apply method is very to .call method. 
+// The .apply method is very similar to .call method. 
 //just that apply takes arrays as arguments instead of the literals or variables
 
 const superSubs = {
@@ -22,3 +22,4 @@ let checkSub = superSubs.subMethod.call(sub2, 20);
 let checkSub2 = superSubs.subMethod.apply(sub2, [20]);
 console.log(checkSub);
 console.log(checkSub2);
+

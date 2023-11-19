@@ -30,3 +30,5 @@ switch (getRandomValueMax(1,6)) {
         console.log("count");
         break;
 }
+let diceNum = Math.floor(Math.random() * (max - min + 1)) + min;
+log

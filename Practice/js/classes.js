@@ -36,3 +36,25 @@ class Activities extends Student{
         
     }
 }
+
+class DiceRoller{
+    constructor(yourTurn){
+        this.yourTurn = yourTurn;
+    }
+    getDiceFigure(){
+        let diceNum = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+        return diceNum;
+    }
+    isSicky() {
+        if(this.getDiceFigure() == 6){
+            this.yourTurn = 1;
+        }else{
+            this.yourTurn = 0;
+        }
+        return this.yourTurn;
+    }
+}
+const player1 = new DiceRoller(1)
+const player2 = new DiceRoller(0)
+
+
