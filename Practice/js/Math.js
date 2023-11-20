@@ -2,9 +2,7 @@
     javaScript math is used to perform mathematical operations
 */
 //console.log(Math.floor(Math.random()));
-
 //return a value from 0 to 9
-
 //getting a random value in JS
 
 
@@ -13,8 +11,7 @@ function getRandomValue(min, max) {
     return Math.floor(Math.random() * (max -min)) + min;
 }
 
-
-// This function is when you want the min and max value included
+// This function is when you want he min and max value includedt
 
 function getRandomValueMax(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min

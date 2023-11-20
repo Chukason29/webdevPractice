@@ -172,9 +172,12 @@ console.log(maxValue(numArray));
 function minValue(arr) {
     let len = arr.length;
     let min = Infinity;
-    if (arr[len] < min) {
-        min = arr[len];
+    while (len--) {
+        if (arr[len] < min) {
+            min = arr[len];
+        }
     }
+    
     return min;
 }
 
@@ -202,4 +205,3 @@ function arrayMode(arr){
 }
 const modeArrays = [1,1,1,1,2,2,2,3,3,3,6,2,7,8,2,1,1];
 console.log(arrayMode(modeArrays));
-

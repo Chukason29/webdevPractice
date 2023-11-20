@@ -44,19 +44,18 @@ const myArraySet = new Set(myArray);
 
 // how to get an array from a set
 const setArray = [...myArraySet]
-//console.log(setArray);
+console.log(setArray);
 
 // get the intersection of two sets
 const firstNumbers = new Set([2,34,1,4,,6,7,8]);
 const secondNumbers = new Set ([9,7,4,2,3,1]);
-
 const intersection = new Set([...firstNumbers].filter(x => secondNumbers.has(x)));
 
 console.log(intersection);
 
 //intersetion of two Arrays
 const intersection2 = [];
-const num1 = [2,34,1,4,,6,7,8];
+const num1 = [2,34,1,4,6,7,8];
 const num2 = [9,7,4,2,3,1];
 num1.forEach(item => {
     if(num2.includes(item))

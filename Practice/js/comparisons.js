@@ -21,4 +21,4 @@ car = {
     color: "Yellow"
 }
 
-console.log(car?.name);
+console.log(car?.model);

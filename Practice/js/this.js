@@ -26,6 +26,8 @@ const car = {
         brake2() // 
     }
 }
+
+
 // To solve the issue above, use the arrow function to write the inner function
 const car2 = {
     name: "Innoson",
@@ -39,9 +41,14 @@ const car2 = {
         console.log(brake2());
     }
 }
-car.brake();
+//car.brake();
 
-
+const myCar ={
+    name:"Mercedes",
+    color: "Gold"
+}
+const carColor = car2.brake.call(myCar);
+console.log(carColor);
 //In an object method, this refers to the object.
 const Friend ={
     fname: "Tommyzan",
@@ -53,7 +60,14 @@ const Friend ={
         return this
     }
 }
-console.log(Friend.fullName()); //returns the object Friend
+const myFriend = {
+    fname: "Wisdom",
+    sname: "Imaoye"
+}
+
+const friendObject = Friend.fullName.call(myFriend);
+console.log(friendObject);
+//console.log(Friend.fullName()); //returns the object Friend
 
 
 //Alone, this refers to the global object.
@@ -64,7 +78,7 @@ console.log(this); // window object
 function funcName() {
     return this;
 }
-console.log(funcName());
+//console.log(funcName());
 
 
 

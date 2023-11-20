@@ -100,7 +100,7 @@ const nums = [1,4,5,6,7,8,2,5,7,8,9,3,1,4,5,6,3,2];
 //.reduce( accumulator, current value, index of current iteration, array used)
 
 reducedNum = nums.reduce(function(a, b) { return a + b});
-console.log(reducedNum);
+//console.log(reducedNum);
 
 
 //indexOf() is used to output the first index of an item, if there are more than two items, the index of the first item is returned
@@ -123,4 +123,4 @@ const carName = "AU";
 const carSearch = products.filter((item) =>
    item.name.toLowerCase().includes(carName.toLowerCase())
 );
-console.log(carSearch);
+//console.log(carSearch);
