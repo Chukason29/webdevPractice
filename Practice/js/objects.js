@@ -85,3 +85,7 @@ const property = {
 // How caan we access car2
 
 console.log(property.cars.car3);
+
+//objects can be converted to array
+const propertyArray = Object.values(property)
+console.log(propertyArray);

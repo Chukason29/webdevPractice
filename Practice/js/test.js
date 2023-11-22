@@ -83,7 +83,7 @@ const thirdCar = new Products("Innoson", 9000, "black");
 
 const myCars = [firstCar, secondCar, thirdCar];
 
-function products(carArray) {
+function displayingProducts(carArray) {
     let allProducts = "";
     let result = document.querySelector(".products");
     for (const i in carArray) {
@@ -91,8 +91,11 @@ function products(carArray) {
     }
     return  result.innerHTML = allProducts;
 }
-products(myCars);
+displayingProducts(myCars);
 
 function filterPrice(price, productArray) {
-    
+    filteredProducts = productArray.filter( product => product.price > price )
+    return filteredProducts;
 }
+
+document.querySelector(".filter-price").addEventListener("click",  () => displayingProducts(filterPrice(6000, myCars)));
