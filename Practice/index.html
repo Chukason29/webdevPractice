@@ -4,6 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
+    <style>
+        .products{
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+        }
+        .products > div {
+            border: 1px solid #999;
+        }
+        .products h4{
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -29,9 +42,17 @@
         </div>
         <button id="btn">Click Here</button>
         <p id="pdemo"></p>
+
+        <input type="text" name="voter" id="voter">
+        <button type="submit" id="check">Check Eligibility</button>
+        <p class="voter-answer"></p>
+
+        <div class="products">
+
+        </div>
+
     </main>
     <footer>
-        <p>for the footer</p>
     </footer>
     <script src="js/test.js"></script>
 </body>

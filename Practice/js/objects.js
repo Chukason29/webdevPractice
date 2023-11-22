@@ -70,3 +70,18 @@ const person2 = {
     age: 16
 }
 console.log(person1.voteEli.call(person2));
+
+//Nested Objects 
+const property = {
+    name: "Polycarp",
+    age: 72,
+    cars: {
+        car1: "Audi",
+        car2: "Innoson",
+        car3: "Porsche"
+    },
+    houses: 2
+}
+// How caan we access car2
+
+console.log(property.cars.car3);
