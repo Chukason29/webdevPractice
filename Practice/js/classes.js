@@ -31,30 +31,49 @@ console.log(tommyZan.eyeColor);
 // use the extend keyword to inherit all the methods of the class
 // use the super keyword to inherit all the properties of a class
 
-class Activities extends Student{
-    constructor(){
-        
-    }
-}
 
-class DiceRoller{
-    constructor(yourTurn){
-        this.yourTurn = yourTurn;
+// INHERITANCE //
+
+class Car {
+    constructor(name, color, type, price){
+        this.name = name;
+        this.color = color;
+        this.type = type;
+        this.price = price;
     }
-    getDiceFigure(){
-        let diceNum = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-        return diceNum;
-    }
-    isSicky() {
-        if(this.getDiceFigure() == 6){
-            this.yourTurn = 1;
-        }else{
-            this.yourTurn = 0;
+    checkType() {
+        let typeResult = ""
+        if (this.type == "Salon") {
+            typeResult = "This is a small car";
+        }else if(this.type == "SUV"){
+            typeResult = "This is a large car";
         }
-        return this.yourTurn;
+        return typeResult;
     }
 }
-const player1 = new DiceRoller(1)
-const player2 = new DiceRoller(0)
+
+const newCar = new Car("Tesla", "White", "Salon", 20000)
+console.log(newCar.name);
+
+class Suv extends Car{
+    constructor(name, color, type, price, engineSize, tyreType){
+        super(name, color, type, price); // super helps in inheriting properties
+        this.engineSize = engineSize;
+        this.tyreType = tyreType;
+    }
+}
+
+const toyotaCar = new Suv("Prado", "Yellow", "SUV", 40000, 8, "Large");
+
+for(const key in toyotaCar){
+    console.log(`${key}: ${toyotaCar[key]}`);
+}
+
+// toyotaCar an object of Suv class inherited the checkType method due from Car class
+console.log(toyotaCar.checkType());
 
 
+////////////////// STATIC METHOD /////////////////////////////////////////
+
+// static methods are methods that are exclusive used within a class
+// an object created from that class can't even use a static method
