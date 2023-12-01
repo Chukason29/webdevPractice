@@ -99,3 +99,43 @@ function filterPrice(price, productArray) {
 }
 
 document.querySelector(".filter-price").addEventListener("click",  () => displayingProducts(filterPrice(6000, myCars)));
+
+
+// doing a small menu
+
+//creating an object constructor
+function Players (playerNum, name, position, shirtNum){
+    this.playerNum = playerNum;
+    this.name = name;
+    this.position = position;
+    this.shirtNum = shirtNum;
+    this.objectList = function(){
+        let myPlayers = ""
+        for(item in this){
+            if (typeof this[item] !="string") {
+                continue;
+            }else{
+                myPlayers += `\t<li>${this[item]}</li>\n`
+            }
+        }
+        return `<ul>\n${myPlayers}</ul>`;
+    }
+}
+const player1 = new Players("001", "Maguire", "Defender", "5");
+const player2 = new Players("002", "Martinez", "Defender", "6");
+const player3 = new Players("003", "Rasford", "Forward", "10");
+
+const playerMap = new Map();
+
+playerMap.set(player1.playerNum, player1);
+playerMap.set(player2.playerNum, player2);
+playerMap.set(player3.playerNum, player3);
+
+console.log(playerMap);
+
+let allPlayers = "";
+parent = document.querySelector(".players");
+playerMap.forEach((value, key) =>{
+    allPlayers += `\n<li>${key} ${value.objectList()}</li>\n`
+})
+parent.innerHTML = allPlayers;

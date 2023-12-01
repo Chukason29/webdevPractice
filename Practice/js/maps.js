@@ -92,7 +92,7 @@ console.log(productsMap.size);
         [2, "Fred"],
         [3, "Chinyere"]
     ];
-
+    
     const arrayMap = new Map(myArray);
     console.log(arrayMap.size);
     console.log(arrayMap.get(1));

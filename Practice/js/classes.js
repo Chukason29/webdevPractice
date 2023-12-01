@@ -52,7 +52,7 @@ class Car {
     }
 }
 
-const newCar = new Car("Tesla", "White", "Salon", 20000)
+const newCar = new Car("Tesla", "White", "Salon", 20000);
 console.log(newCar.name);
 
 class Suv extends Car{
@@ -77,3 +77,65 @@ console.log(toyotaCar.checkType());
 
 // static methods are methods that are exclusive used within a class
 // an object created from that class can't even use a static method
+// Not only methods, properties can also be static
+class Plant {
+    constructor(name, type, color){
+        this.name = name;
+        this.type = type;
+        this.color = color;
+    }
+    static checkColor(){
+        const colorResult = this.color = "green" ? "vegetative" : "non-vegetative";    
+        return colorResult;
+    }
+    colorChange(newColor){
+        if (Plant.checkColor() == "non-vegetative"){ // Only the class itself can access a static method
+            this.color = newColor;
+        }
+    }
+}
+
+const orangePlant = new Plant ("orange", "Citrus", "green");
+
+//This will return an error because checkColor is a static method
+//console.log(orangePlant.checkColor());
+
+orangePlant.colorChange("Pink");
+console.log(orangePlant.color);
+
+////////////////////// GETTERS AND SETTERS ////////////////////////
+/*
+    getter an setter methods are needed for getting securing properties
+*/
+class Planet {
+    constructor(_name, _distance, _size){
+        this._name = _name;
+        this._distance = _distance;
+        this._size = _size;
+    }
+    set name(x){
+        this._name = x;
+    }
+    get name(){
+        return this._name;
+    }
+}
+const myPlanet = new Planet("Earth", 50000, 6400);
+console.log(myPlanet.name);
+
+
+class Player {
+    constructor(_name, _position, _shirtNum){// the underscore is just to different each property from  their getter/setter methods
+        this._name = _name;
+        this._position = _position;
+        this._shirtNum = _shirtNum;
+    }
+    set name(x){
+        return this._name = x
+    }
+    get name(){
+        return this._name
+    }
+}
+const Saka = new Player("bukayo", "winger", 7);
+console.log(Saka.name);

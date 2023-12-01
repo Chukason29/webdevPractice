@@ -101,7 +101,7 @@ const propertyArray = Object.values(property)
 console.log(propertyArray);
 
 //Object Accessors
-// THE GETTERS AND SETTERS IS THE  BEST METHOD OF SETTING AND GETTING VALUE
+// THE GETTERS AND SETTERS IS THE  BEST METHOD OF SETTING AND GETTING 
 // FROM AN OBJECT ESPECIALLY FOR SECURITY PURPOSES
 
 const Student = {
