@@ -155,12 +155,11 @@ function productPrice(){
     return 10000;
 }
 
-//always add methods to the prototype of the object
+//always add methods to the prototype of the object not to the object itself
 Product.prototype.priceSlash = function(){
     const priceEligibility = this.price <= productPrice() ? "Eligible" : "Not Eligible";
     return priceEligibility;
 }
 
 const myCar1 = new Product("Innoson", 12600, "Red", 120);
-
 console.log(myCar1.priceSlash());

@@ -52,7 +52,7 @@ products.forEach((product)=>{ //This is the alternative of using normal function
 });
 
 
-
+// NEVER assign a forEach iteration to a variable like .map, .filter, .find, etc
 /* While the .forEach performs actions on each array, it doesn't create a new array
     To create a new array after performing such functions, use .map()
 
