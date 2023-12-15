@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calc-body{
+            width: 350px;
+            height: 450px;
+            border: 1px solid #888;
+            border-radius: 7px;
+            margin: auto;
+            padding: 10px;
+            background-color: bisque;
+        }
+        #calc-glass{
+            width: 99%;
+            height: 10%;
+            display: inline-block;
+            margin-inline: auto;
+            margin-block-end: 1rem;
+        }
+        .calc-buttons{
+            width: 100%;
+            height: 85%;
+            border: 1px solid #888;
+            margin: auto;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc-body">
+        <input type="text" name="calc-glass" id="calc-glass" readonly>
+        <div class="calc-buttons">
+
+        </div>
+    </div>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

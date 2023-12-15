@@ -33,14 +33,14 @@ userMap.set(userObject.id, {
     color: userObject.color
 })
 
-//function to get the just the name of an entry in a Map
+//function to get just name of an entry in a Map
 
 function nameMap(mapName, mapKey) {
     if (mapName.has(mapKey)) {
        return mapName.get(mapKey).name;
     }
 }
-//console.log(nameMap(studentMap, studentNumber));
+console.log(nameMap(studentMap, studentNumber));
 
 const allUsers = new Map();
 
@@ -103,4 +103,4 @@ console.log(productsMap.size);
     const theArray = mapArray.map(item => {
         return item[1] == "Ngozi"
     })
-    //console.log(theArray);
+    console.log(theArray);

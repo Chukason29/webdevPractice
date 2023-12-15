@@ -34,8 +34,7 @@ const recordCollection = {
         }else{
             records[id][prop] = [];
             records[id][prop].push(value);
-         }
-        
+         } 
     }
     return records;
   }
@@ -83,22 +82,24 @@ const contacts = [
   }
 ];
 
-function lookUpProfile(myArray,name, prop){
+function lookUpProfile(name, prop){
   // Only change code below this line
   let answer = ""
-  myArray.forEach(element => {
+  for(const element of contacts) {
     if (element.firstName == name) {
       if (prop in element) {
-        console.log(element[prop]);
+        answer = element[prop];
+        break
       }else{
-        console.log("No such property");
+        answer = "No such property";
+        break;
       }
     }else{
-      console.log("No such contact");
+      answer = "No such contact"
     }
-  })
+  }
   return answer;
   // Only change code above this line
 }
 
-console.log(lookUpProfile(contacts,"Akira", "likes"))
+console.log(lookUpProfile("Sherlock", "likes"))
