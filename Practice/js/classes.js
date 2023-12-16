@@ -123,19 +123,29 @@ class Planet {
 const myPlanet = new Planet("Earth", 50000, 6400);
 console.log(myPlanet.name);
 
-
-class Player {
-    constructor(_name, _position, _shirtNum){// the underscore is just to different each property from  their getter/setter methods
-        this._name = _name;
-        this._position = _position;
-        this._shirtNum = _shirtNum;
+//A setter name and the corresponding getter method must ha
+class Product{
+    constructor(purchaseDate, amountPaid){
+        this._purchasedate = purchaseDate;
+        this._amountPaid = amountPaid;
     }
-    set name(x){
-        return this._name = x
+    get purchaseDate(){
+        return this._purchasedate;
     }
-    get name(){
-        return this._name
+    set purchaseDate(newDate){
+        this._purchasedate = newDate
+    }
+    get amountPaid(){
+        return this._amountPaid
+    }
+    set amountPaid(newAmount){
+        this._amountPaid = newAmount
     }
 }
-const Saka = new Player("bukayo", "winger", 7);
-console.log(Saka.name);
+
+const Saxophone = new Product(new Date(), 5000);
+let newProduct = Saxophone.amountPaid;// using the getter method
+console.log(newProduct);
+Saxophone.amountPaid = 12000// using the setter method,
+console.log(Saxophone.amountPaid);// The new amount will now 12,000
+

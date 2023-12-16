@@ -30,3 +30,9 @@ console.log(addNumber(32,4,5,6,12));
 
 //NOTE: A function definition can only have one rest parameter
 //An it must be the last parameter
+
+const Mean = (...args) =>{
+    let totalNum = args.reduce((x, y) => x + y);
+    return totalNum / args.length
+}
+console.log(Mean(10,21,32,41));
