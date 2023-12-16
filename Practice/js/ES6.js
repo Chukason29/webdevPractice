@@ -13,15 +13,6 @@ console.log(checkScope());
 // variables with declared with const can be mutated but
 // can't be reassigned
 
-//Always project object mutation using Object.freeze()
-const myObject = {
-    name: "Chukwuebuka",
-    age: 29
-}
-Object.freeze(myObject)
-//myObject.age = 30; // This throws an error
-console.log(myObject);
-
 // Default parameter
 // default parameter is used when the matching argument of that
 // parameter is not place during function call

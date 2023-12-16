@@ -27,3 +27,6 @@ function addNumber(a, b, ...args) {
     return totalNum
 }
 console.log(addNumber(32,4,5,6,12));
+
+//NOTE: A function definition can only have one rest parameter
+//An it must be the last parameter

@@ -42,10 +42,6 @@ products.forEach((item) => {
     //console.log(item);
 });
 
-/*function listAllProducts(product) {
-    productList += product.name +"\n" + product.price + "\n" + product.model +"\n\n";
-    return productList;
-}*/
 products.forEach((product)=>{ //This is the alternative of using normal function
     productList += product.name + '\n'+ product.price + '\n'+ product.model + '\n\n';
     //console.log(productList);
@@ -123,4 +119,4 @@ const carName = "AU";
 const carSearch = products.filter((item) =>
    item.name.toLowerCase().includes(carName.toLowerCase())
 );
-//console.log(carSearch);
+console.log(carSearch);
