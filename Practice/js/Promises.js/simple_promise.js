@@ -3,22 +3,24 @@
 
 // A promise is a function that waits for a piece of code to run completely
 
-const isPhoneCallSucess = false
+const sensorDistance = 5
 
-const phoneCall = new Promise((resolve, reject) =>{
-    if (isPhoneCallSucess) {
-        resolve("Call went through")
+const checkSensorDistance = new Promise((resolve, reject)=>{
+    if (sensorDistance > 2) {
+        resolve("Keep Moving")
     }else{
-        reject("Call failed")
+        reject("Stop Moving")
     }
 })
 
 // You now use the then and catch methods to display the message of resolve
 // and reject as needed
 
-phoneCall.then((message)=> {
+checkSensorDistance.then((message)=>{
     console.log(message);
 }).catch((error)=>{
     console.log(error);
 })
+
+
 
