@@ -7,6 +7,16 @@ function largestOfFour(arr) {
   return newArray
 }
 
+///////////////    OR   /////////////////////////////
+
+function largestOfFours(arr) {
+    const newArray = []
+    for (let elem of arr){
+      elem.sort((a, b) => a - b)
+      newArray.push(elem[elem.length-1])
+    }
+    return newArray
+ }
 console.log(largestOfFour(
     [
         [4, 5, 1, 3], 
