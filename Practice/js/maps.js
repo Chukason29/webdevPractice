@@ -104,3 +104,5 @@ console.log(productsMap.size);
         return item[1] == "Ngozi"
     })
     console.log(theArray);
+
+    //Map Projects
