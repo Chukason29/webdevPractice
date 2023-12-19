@@ -5,11 +5,11 @@
 //THINGS TO NOTE About .splice()
 // The original array will be mutated
 // splice returns an array
-
-const Nums = [1,2,3,4,5,6,7,8,9,0,4,5]
-let spliceNum = Nums.splice(8, 3, 20, 21, 22, 23)
-console.log("spliced array: " + spliceNum);
-console.log(Nums);// notice how 20, 21, 22, 23 was added to spot spliced out
+let mmmmm =[8,9,0,4,5]
+const Nums = [1,2,3,4,5,6,7]
+let spliceNum = Nums.splice(3, 2, ...mmmmm)
+//console.log( spliceNum);
+//console.log(Nums);// notice how 20, 21, 22, 23 was added to spot spliced out
 
 
 /********************************SLICE METHOD******************************************** */
@@ -21,4 +21,11 @@ console.log(Nums);// notice how 20, 21, 22, 23 was added to spot spliced out
 
 const numArray = [6, 4, 4, 3, 7, 9, 10, 16, 17]
 const slicedNumArray = numArray.slice(3, 6)
-console.log(slicedNumArray);
+//console.log(slicedNumArray);
+
+function frankenSplice(arr1, arr2, n) {
+    let newArray = arr2.splice(0, 2, 1, 2, 4)
+    return arr2
+  } 
+  
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
