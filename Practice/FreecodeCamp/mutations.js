@@ -18,6 +18,6 @@ function mutation(arr) {
       arrayAnswer = true
     }
     return arrayAnswer
-  }
+}
   
   console.log(mutation(["Mary", "Army"]));
