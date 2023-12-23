@@ -6,8 +6,8 @@
     <title>Document</title>
     <style>
         .calc-body{
-            width: 350px;
-            height: 450px;
+            width: 200px;
+            height: 250px;
             border: 1px solid #888;
             border-radius: 7px;
             margin: auto;
@@ -15,18 +15,30 @@
             background-color: bisque;
         }
         #calc-glass{
-            width: 99%;
+            max-width: 99%;
             height: 10%;
             display: inline-block;
             margin-inline: auto;
             margin-block-end: 1rem;
         }
         .calc-buttons{
-            width: 100%;
-            height: 85%;
+            max-width: 100%;
+            height: 180px;
             border: 1px solid #888;
             margin: auto;
-            padding: 1rem;
+            padding: .6rem;
+        }
+        .calc-buttons > div{
+            display: flex;
+            justify-content: space-around;
+            gap: .7rem;
+            margin-top: .5rem;
+        }
+        .calc-buttons > div span{
+            background-color: red;
+            color: white;
+            padding: .5rem 1rem;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -34,9 +46,28 @@
     <div class="calc-body">
         <input type="text" name="calc-glass" id="calc-glass" readonly>
         <div class="calc-buttons">
-
+            <div>
+                <span class="number" id="seven">7</span>
+                <span class="number" id="eight">8</span>
+                <span class="number" id="nine">9</span>
+            </div>
+            <div>
+                <span class="number" id="four">4</span>
+                <span class="number" id="five">5</span>
+                <span class="number" id="six">6</span>
+            </div>
+            <div>
+                <span class="number" id="one">1</span>
+                <span class="number" id="two">2</span>
+                <span class="number" id="three">3</span>
+            </div>
+            <div>
+                <span class="" id="plus">+</span>
+                <span class="number" id="zero">0</span>
+                <span class="" id="">-</span>
+            </div>
         </div>
     </div>
-    <script src="js/calculator.js"></script>
+    <script src="./calc.js"></script>
 </body>
 </html>
