@@ -48,15 +48,20 @@ function minusNum(x, y) {
 }
 function operation(){
     let total
-    if (signCount == 1) {
-      total =    addNum(parseInt(screenArray), parseInt(newScreen))
-    }else if(signCount == 2){
-        total =  multiplyNum(parseInt(screenArray), parseInt(newScreen))
-    }else if (signCount == 3) {
-        total =    divideNum(parseInt(screenArray), parseInt(newScreen))
-    }else if(signCount == 4){
-        total =  minusNum(parseInt(screenArray), parseInt(newScreen))
+    try {
+        if (signCount == 1) {
+            total =    addNum(parseInt(screenArray), parseInt(newScreen))
+        }else if(signCount == 2){
+            total =  multiplyNum(parseInt(screenArray), parseInt(newScreen))
+        }else if (signCount == 3) {
+            total =    divideNum(parseInt(screenArray), parseInt(newScreen))
+        }else if(signCount == 4){
+            total =  minusNum(parseInt(screenArray), parseInt(newScreen))
+        }
+    } catch (error) {
+        alert(error)
     }
+    
     glass.value = total
     signCount = 0
     screenArray = ""
