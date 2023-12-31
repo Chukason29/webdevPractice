@@ -120,3 +120,8 @@ const carSearch = products.filter((item) =>
    item.name.toLowerCase().includes(carName.toLowerCase())
 );
 console.log(carSearch);
+
+//.find() iterates through an array an returns the first element that satisfies a given condition
+
+const carFind  = products.find(item => item.price > 6000)
+console.log(carFind)
